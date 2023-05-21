@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "./src/types", "@emotion/react/types/css-prop"],
+    // "jsxImportSource": "@emotion/react",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "strict": true,
+    "downlevelIteration": true,
+    "useDefineForClassFields": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "checkJs": true,
+    "paths": {
+      "~/store": ["./src/store/index"],
+      "~/api": ["./src/api/index"],
+      "~/pages/*": ["./src/pages/*"],
+      "~/components": ["./src/components/index"],
+      "~/styles": ["./styles/index.css"],
+      "~/auth": ["./src/auth/index"],
+      "~/providers": ["./src/providers"],
+      "~/config": ["./src/config/index"],
+      "~/layout": ["./src/layout/index"],
+      "~/src/*": ["./src/*"],
+      "~/theme": ["./src/styles/theme/index"],
+      "~/libs": ["./src/libs/index"],
+      "~/server": ["./server/index"],
+      "~/interfaces": ["./src/interfaces/index"],
+      "~/hooks": ["./src/library/hooks/index"],
+      "~/icons": ["./src/library/icons/index"],
+      "~/types": ["./src/library/types/index"],
+      "~/themes": ["./src/library/theme/index"],
+      "~/utils": ["./src/library/utils/index"],
+      "~/context": ["./src/library/context/index"]
+    },
+    "incremental": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+    /* ts-node overrides if you need ts-node to use different compiler options than tsc.  This is usually not necessary */
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

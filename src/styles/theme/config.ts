@@ -1,0 +1,133 @@
+import { IThemeColors, IPallets } from './themeTypes';
+
+export const PALLETS: IPallets = {
+  // blue primary
+  primary: {
+    50: '#f7f7fd',
+    100: '#efeefc',
+    200: '#d8d5f6',
+    300: '#c1bcf1',
+    400: '#928ae7',
+    500: '#6358dc',
+    600: '#594fc6',
+    700: '#4a42a5',
+    800: '#3b3584',
+    900: '#312b6c',
+  },
+  // white
+  neutral: {
+    50: '#ffffff',
+    100: '#ffffff',
+    200: '#ffffff',
+    300: '#ffffff',
+    400: '#ffffff',
+    500: '#ffffff',
+    600: '#e6e6e6',
+    700: '#bfbfbf',
+    800: '#999999',
+    900: '#7d7d7d',
+  },
+  // grey - icons and subtitle text
+  text: {
+    50: '#f5f5f5',
+    100: '#eaeaea',
+    200: '#cbcbcb',
+    300: '#acacac',
+    400: '#6d6d6d',
+    500: '#2f2f2f',
+    600: '#2a2a2a',
+    700: '#232323',
+    800: '#1c1c1c',
+    900: '#171717',
+  },
+  // title text - black
+  graphite: {
+    50: '#f7f7f7',
+    100: '#f0f0f0',
+    200: '#d9d9d9',
+    300: '#c2c2c2',
+    400: '#959595',
+    500: '#676767',
+    600: '#5d5d5d',
+    700: '#4d4d4d',
+    800: '#3e3e3e',
+    900: '#323232',
+  },
+  // red
+  cherry: {
+    50: '#fef5f5',
+    100: '#feebeb',
+    200: '#fccccc',
+    300: '#faaeae',
+    400: '#f67171',
+    500: '#f23434',
+    600: '#da2f2f',
+    700: '#b62727',
+    800: '#911f1f',
+    900: '#771919',
+  },
+  // green
+  apple: {
+    50: '#f3faf6',
+    100: '#e8f6ed',
+    200: '#c5e8d1',
+    300: '#a3dab5',
+    400: '#5dbf7e',
+    500: '#18a347',
+    600: '#169340',
+    700: '#127a35',
+    800: '#0e622b',
+    900: '#0c5023',
+  },
+  // primary 500
+  secondary: {
+    50: '#fcfbfe',
+    100: '#f8f8fd',
+    200: '#eeedfb',
+    300: '#e4e2f9',
+    400: '#cfccf4',
+    500: '#bbb6ef',
+    600: '#a8a4d7',
+    700: '#8c89b3',
+    800: '#706d8f',
+    900: '#5c5975',
+  },
+  // border colors
+  alto: {
+    50: '#fdfdfd',
+    100: '#fcfcfc',
+    200: '#f7f7f7',
+    300: '#f2f2f2',
+    400: '#e9e9e9',
+    500: '#dfdfdf',
+    600: '#c9c9c9',
+    700: '#a7a7a7',
+    800: '#868686',
+    900: '#6d6d6d',
+  },
+  // background colors
+  mercury: {
+    50: '#fefefe',
+    100: '#fcfcfc',
+    200: '#f9f9f9',
+    300: '#f5f5f5',
+    400: '#ededed',
+    500: '#e5e5e5',
+    600: '#cecece',
+    700: '#acacac',
+    800: '#898989',
+    900: '#707070',
+  },
+};
+
+export const COLOR_LIST: IThemeColors[] = [
+  'text',
+  'cherry',
+  'mercury',
+  'neutral',
+  'apple',
+  'primary',
+  'alto',
+  'secondary',
+  'graphite',
+];

@@ -1,0 +1,183 @@
+{
+  "plugins": ["react", "@emotion", "import", "react-hooks", "typescript-sort-keys"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react-hooks/recommended",
+    "prettier",
+    "plugin:typescript-sort-keys/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "globals": {
+    "React": true,
+    "JSX": true
+  },
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true
+  },
+  "ignorePatterns": [
+    "build/*",
+    "public/*",
+    "dist/*",
+    "node_modules/*",
+    "**/*.html",
+    "**/*.test.ts",
+    "**/*.d.ts",
+    "src/library/*",
+
+    // ignore all root files with below extensions
+    "/*.ts",
+    "/*.js",
+    "/*.cjs",
+    "/*.md",
+    "/*.json",
+    "/*.mjs",
+    "/*.yml"
+  ],
+  "rules": {
+    //HOOKS
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
+    "react/jsx-sort-props": [
+      1,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "multiline": "last",
+        "ignoreCase": true,
+        // "noSortAlphabetically": true,
+        "reservedFirst": true
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error", // or "error"
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "jsx-a11y/role-has-required-aria-props": 0,
+    "react/no-array-index-key": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "react/destructuring-assignment": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    // note you must disable the base rule as it can report incorrect errors
+    /*
+     * https://typescript-eslint.io/rules/no-redeclare/
+     */
+    "react/require-default-props": 0,
+    "react/no-unknown-property": [1, { "ignore": ["css"] }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "no-prototype-builtins": "off",
+    "@typescript-eslint/no-redeclare": ["error"],
+    "no-redeclare": 0,
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-unsafe-return": "off",
+    // "no-unused-vars": "off",
+    "no-nested-ternary": "off",
+    "no-console": ["warn", { "allow": ["warn", "error", "dir"] }],
+    "no-bitwise": "off",
+    // "no-shadow": "off",
+    "import/prefer-default-export": "off",
+    "react/state-in-constructor": "off",
+    "react/jsx-props-no-spreading": "off",
+    "prefer-spread": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "./src/setupTests.ts",
+          "**/*.test.tsx",
+          "**/*.test.ts",
+          "**/*.stories.tsx"
+        ]
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "unknown",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        // "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "no-param-reassign": 0,
+    "prefer-object-spread": 0,
+    "import/no-unresolved": "error",
+    "import/extensions": [0],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": [0],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "camelcase": "off"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    },
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+      // default to "createReactClass"
+      "pragma": "React", // Pragma to use, default to "React"
+      "fragment": "Fragment", // Fragment to use (may be a property of <pragma>), default to "Fragment"
+      "version": "detect", // React version. "detect" automatically picks the version you have installed.
+      // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+      // It will default to "latest" and warn if missing, and to "detect" in the future
+      "flowVersion": "0.53" // Flow version
+    }
+  }
+}
