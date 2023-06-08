@@ -1,4 +1,4 @@
-import Home from '../pages/home';
+import Home from '@components/pages/home';
 import { CustomRouteObj } from '../routes/type';
 
 export const routes: CustomRouteObj[] = [
