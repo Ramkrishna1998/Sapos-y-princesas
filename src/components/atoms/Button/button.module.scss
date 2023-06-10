@@ -1,0 +1,29 @@
+.btn {
+  font-size: rem(11px);
+  line-height: calc(15px/11px)*1;
+  text-transform: uppercase;
+  padding: calc(12px/11px)*1em calc(19px/11px)*1em;
+  border-radius: calc(3px/11px)*1em;
+  font-weight: 600;
+  border: calc(1.5px/11px)*1em solid $primary;
+  background: $primary;
+  color: $white;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  letter-spacing: inherit;
+  white-space: nowrap;
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $primary;
+  }
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    background: $disable;
+    border-color: $disable;
+    color: $disable-dark;
+  }
+}

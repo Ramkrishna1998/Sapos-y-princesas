@@ -1,11 +1,13 @@
-import { ExampleComponent } from '../atoms/ExampleComponent';
+import '@resources/css/custom.module.scss';
+import { Header } from '@components/organisms/header';
 
 const Home = () => {
   return (
-    <div className='flex h-screen items-center justify-center bg-blue-50 text-9xl text-sky-500'>
-      Home
-      <ExampleComponent />
+   <>
+    <div className='page-body'>
+    <Header />
     </div>
+   </>
   );
 };
 
