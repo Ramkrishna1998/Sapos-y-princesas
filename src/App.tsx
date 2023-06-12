@@ -1,4 +1,6 @@
 import { MainRouter } from './routes/main';
+// import '@resources/css/custom.module.scss';
+
 
 const App = () => {
   return (

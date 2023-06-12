@@ -1,0 +1,82 @@
+// @import url('../../../resources/css/custom.module.scss');
+.main_header {
+  max-width: 700px;
+}
+
+.tag_list {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.form_element {
+  display: flex;
+  gap: 0.5rem;
+  @media (max-width: 768px) {
+    display: block;
+    button {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+.col2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px 8px;
+  flex-wrap: wrap;
+  .card_aside {
+    width: 49%;
+  }
+  @media (max-width: 768px) {
+    display: block;
+    .card_aside {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+      }
+  }
+}
+
+.tag_Dark {
+  justify-content: center;
+  div {
+    background-color: black;
+    p {
+      color: #fff;
+    }
+  }
+}
+
+.row_planes {
+  gap: 8px;
+  @media (max-width: 768px) {
+    display: block;
+    .col_plans {
+        margin-bottom: 0.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+  }
+}
+
+.basic_banner_Card {
+  .basic_banner_details {
+    margin-top: 2rem;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    .basic_banner_img {
+      order: 2;
+    }
+    .basic_banner_details {
+      order: 1;
+      margin-top: 0;
+    }
+  }
+}

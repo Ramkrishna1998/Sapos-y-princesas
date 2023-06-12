@@ -1,0 +1,73 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.menu_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle_box {
+  gap: 20px;
+
+}
+.logo {
+  margin-bottom: 0.5rem;
+}
+.main_nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  .Sub_Category {
+    list-style: none;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    padding: 9px 0;
+    a {
+      color: #161616;
+      text-decoration: none;
+      white-space: nowrap;
+      &:after {
+        content: '';
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #161616;
+        display: inline-block;
+        vertical-align: baseline;
+        margin: 3px 8px;
+      }
+    }
+    &:last-child {
+      a {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
+ }
+}
+
+.sub_nav {
+  background: #f2f2f2;
+  border-top: 1px solid #dbdbdb;
+  ul {
+    li {
+      padding: 0.75px 0;
+      a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 180%;
+      }
+    }
+  }
+}

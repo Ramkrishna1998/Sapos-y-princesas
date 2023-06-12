@@ -1,0 +1,15 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.icon_list_container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ img {
+  max-width: 20px;
+  height: auto;
+ }
+}
+
+.Icon_box {
+  padding:12px;
+}

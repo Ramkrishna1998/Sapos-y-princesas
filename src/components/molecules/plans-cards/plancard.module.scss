@@ -1,0 +1,72 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.plan_card_box {
+  display: block;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  .cardclassname {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.plan_description {
+  padding: 22px;
+  span {
+    font-weight: 700;
+    font-size: 12px;
+    display: block;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: #565656;
+    line-height: 180%;
+  }
+}
+
+.plan_info {
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  img {
+    max-width: 17px;
+    margin-right: 12px;
+    filter: invert(34%) sepia(19%) saturate(5%) hue-rotate(354deg) brightness(94%) contrast(95%);
+  }
+  span {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    text-transform: inherit;
+    letter-spacing: normal;
+
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.side_by_side {
+  display: flex;
+  justify-content: space-between;
+  .plan_description {
+    display: block;
+    order: 1;
+    width: 50%;
+  }
+  .imgcard {
+    order: 2;
+    width: 50%;
+    div {
+      height: 100%;
+    }
+  }
+  .card_img_Fix {
+    border-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+  }
+}
