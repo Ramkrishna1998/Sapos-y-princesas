@@ -1,0 +1,15 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.tag {
+  border: 1px solid #DBDBDB;
+  border-radius: 25px;
+  padding: 1px 12px;
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    margin: 0;
+  }
+}

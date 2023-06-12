@@ -1,6 +1,130 @@
+// @import url('../../../resources/css/custom.module.scss');
 
 .menu_top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.toggle_box {
+  gap: 20px;
+}
+.logo {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  max-width: 16.813rem;
+  aspect-ratio: 269 / 70;
+  @media (max-width: 768px) {
+    max-width: 5.625rem;
+    margin: 10px 0;
+  }
+}
+
+.desktop_logo {
+  display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile_logo {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.toggle_icon,
+.search_Icon {
+  @media (max-width: 768px) {
+    max-width: 22px;
+  }
+}
+.profile_button {
+  @media (max-width: 768px) {
+    max-width: 24px;
+  }
+}
+
+.main_nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  .Sub_Category {
+    list-style: none;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    padding: 9px 0;
+    a {
+      color: #161616;
+      text-decoration: none;
+      white-space: nowrap;
+      &:after {
+        content: '';
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #161616;
+        display: inline-block;
+        vertical-align: baseline;
+        margin: 3px 8px;
+      }
+    }
+    &:last-child {
+      a {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    padding: 0 10px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 52px;
+      height: 100%;
+      z-index: 1;
+      position: absolute;
+      right: 0;
+      background: linear-gradient(270deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 85.71%), linear-gradient(270deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 85.71%);
+    }
+    &::before {
+      content: '';
+      width: 52px;
+      height: 100%;
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      background: linear-gradient(70deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 85.71%), linear-gradient(90deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 85.71%);
+
+    }
+  }
+
+}
+
+.sub_nav {
+  background: #f2f2f2;
+  border-top: 1px solid #dbdbdb;
+  ul {
+    li {
+      padding: 0.75px 0;
+      a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 180%;
+      }
+    }
+  }
 }

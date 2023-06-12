@@ -1,0 +1,61 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.info_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #161616;
+  li {
+    display: flex;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 8px;
+    }
+  }
+  span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    display: block;
+    line-height: 28.8px;
+    max-width: 319px;
+  }
+  a {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    color: #161616;
+  }
+  .monolist {
+    display: inline-flex;
+    font-weight: 700;
+    text-transform: uppercase;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 0.16em;
+  }
+}
+
+.Img_box {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  padding-top: 4px;
+}
+
+.title_info_details {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  img {
+    margin-left: 13px;
+    margin-bottom: 0.5rem;
+  }
+}

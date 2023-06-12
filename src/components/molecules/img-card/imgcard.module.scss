@@ -1,0 +1,74 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.Img_box {
+  width: 100%;
+  position: relative;
+  .card_Img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+}
+
+.specials {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  img {
+    width: 100%;
+  }
+}
+
+.card_title {
+  display: block;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 150%;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.overlay_content {
+  display: inline-block;
+  background: rgba(252, 252, 252, 0.8);
+  color: #565656;
+  position: absolute;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 180%;
+  letter-spacing: 0.16em;
+  padding: 3px 8px;
+  border-radius: 15px;
+}
+.top_right {
+  top: 0.75rem;
+  right: 0.75rem;
+}
+.bottom_right {
+  bottom: 0.75rem;
+  right: 0.75rem;
+}
+
+.basic_card {
+  .top_right , .bottom_right {
+    display: none;
+  }
+  @media (max-width:768px) {
+    .card_title {
+      text-align: right;
+    }
+  }
+  @media (max-width:480px) {
+    .Img_box {
+      width: 100%;
+      height: 208px;
+      .card_Img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

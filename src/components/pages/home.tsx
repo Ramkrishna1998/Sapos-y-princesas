@@ -1,4 +1,4 @@
-import '@resources/css/custom.module.scss';
+import { Article } from '@components/organisms/artical';
 import { Header } from '@components/organisms/header';
 
 const Home = () => {
@@ -6,6 +6,7 @@ const Home = () => {
    <>
     <div className='page-body'>
     <Header />
+    <Article />
     </div>
    </>
   );

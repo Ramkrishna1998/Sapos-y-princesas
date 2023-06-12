@@ -1,0 +1,20 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.add_card_box {
+  display: block;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+
+.add_card_img {
+  width: 100%;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.add_description {
+  padding: 22px;
+}
