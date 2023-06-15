@@ -57,7 +57,7 @@ export const Article: React.FC<IarticlesProps> = (props) => {
       <div className='pt_2 container'>
         <div className='m_auto btn_with_Title mb_22'>
           <h2 className='text_gray'>Planes en</h2>
-          <Button showicon Icon={Downarrow} className={cn(ButtonStyles.btn_icon_with, '')}>
+          <Button showicon className={cn(ButtonStyles.btn_icon_with, '')} Icon={Downarrow}>
             Santa Cruz de Tenerife
           </Button>
         </div>
@@ -189,7 +189,7 @@ export const Article: React.FC<IarticlesProps> = (props) => {
                 <span>Edad: +7</span>
               </li>
             </InfoDetailList>
-            <Button showicon Icon={RightArrow2} className={cn(ButtonStyles.btn_icon_aprat, 'mt_1')}>
+            <Button showicon className={cn(ButtonStyles.btn_icon_aprat, 'mt_1')} Icon={RightArrow2}>
               Comprar entradas
             </Button>
           </div>
@@ -240,8 +240,8 @@ export const Article: React.FC<IarticlesProps> = (props) => {
           </InfoDetailList>
           <Button
             showicon
-            Icon={RightArrow1}
             className={cn(ButtonStyles.btn_icon_aprat, 'mt_2 mb_2')}
+            Icon={RightArrow1}
           >
             Comentarios (65)
           </Button>
@@ -262,24 +262,25 @@ export const Article: React.FC<IarticlesProps> = (props) => {
       <Advertisement />
       <div className='pt_2 pb_2 container'>
         <h2 className='text_gray mb_22'>Consultar fechas</h2>
+        <div> 
         <DatePicker
+          inline
+          className='datepicker_theme'
+          monthsShown={3}
           selected={startDate}
           onChange={(date) => setStartDate(date)}
-          monthsShown={3}
-          inline
         />
+        </div>
       </div>
       <div className='pt_2 container'>
         <h2 className='text_gray mb_22'>Planes similares</h2>
         <Swiper
           navigation
           pagination
+          className='plans_slider mb_2'
           modules={[Navigation, Pagination, A11y]}
           slidesPerView={3}
           spaceBetween={8}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
-          className='plans_slider mb_2'
           breakpoints={{
             0: {
               slidesPerView: 1.7,
@@ -291,6 +292,8 @@ export const Article: React.FC<IarticlesProps> = (props) => {
               slidesPerView: 3,
             },
           }}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <PlanCard />
@@ -382,12 +385,10 @@ export const Article: React.FC<IarticlesProps> = (props) => {
         <Swiper
           navigation
           pagination
+          className='plans_slider mb_2'
           modules={[Navigation, Pagination, A11y]}
           slidesPerView={3}
           spaceBetween={8}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
-          className='plans_slider mb_2'
           breakpoints={{
             0: {
               slidesPerView: 1.7,
@@ -399,6 +400,8 @@ export const Article: React.FC<IarticlesProps> = (props) => {
               slidesPerView: 3,
             },
           }}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <AdvertisementCard />

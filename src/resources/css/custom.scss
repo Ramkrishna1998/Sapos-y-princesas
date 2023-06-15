@@ -316,14 +316,12 @@ summary {
   --font-family: 'Nunito', sans-serif;
 }
 
-
-
 // Layout design is here
 .container_limit {
   width: 100%;
   margin: 0 auto;
   padding: 0 82px;
-  @media(max-width:1024px) {
+  @media (max-width: 1024px) {
     padding: 0 12px;
   }
 }
@@ -337,7 +335,7 @@ summary {
 .container_article {
   max-width: 724px;
   margin: 0 auto;
-  @media(max-width:768px) {
+  @media (max-width: 768px) {
     margin: inherit;
   }
 }
@@ -390,7 +388,12 @@ a {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   margin: 0;
 }
 
@@ -403,8 +406,8 @@ h2 {
 
 .h3 {
   font-weight: 700;
-font-size: 22px;
-line-height: 130%;
+  font-size: 22px;
+  line-height: 130%;
 }
 
 .h3-v2 {
@@ -415,8 +418,8 @@ line-height: 130%;
 
 h4 {
   font-weight: 700;
-font-size: 20px;
-line-height: 130%;
+  font-size: 20px;
+  line-height: 130%;
 }
 
 p {
@@ -462,10 +465,10 @@ small {
   margin-bottom: 2rem;
 }
 .mt_22 {
-  margin-top: 22px ;
+  margin-top: 22px;
 }
 .mb_22 {
-  margin-bottom: 22px ;
+  margin-bottom: 22px;
 }
 .pt_1 {
   padding-top: 1rem;
@@ -529,12 +532,13 @@ small {
 .plans_slider {
   position: relative;
 
-  .swiper-button-next, .swiper-button-prev {
-    background: #F2F2F2;
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: #f2f2f2;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid #DBDBDB;
+    border: 1px solid #dbdbdb;
   }
 
   .swiper-button-prev {
@@ -567,17 +571,16 @@ small {
     margin-bottom: 22px;
     span {
       width: 6px;
-    height: 6px;
-    background: #DBDBDB;
-    opacity: 1;
+      height: 6px;
+      background: #dbdbdb;
+      opacity: 1;
     }
     .swiper-pagination-bullet-active {
       width: 10px;
       height: 10px;
       background: #161616;
     }
-    
-}
+  }
 }
 
 // form
@@ -589,14 +592,14 @@ small {
 
 .form_control {
   display: inline-block;
-    width: 100%;
-    border: 1px solid #DBDBDB;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 180%;
-    color: #969696;
-    padding: 6px 12px;
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+  color: #969696;
+  padding: 6px 12px;
 }
 
 .colomns {
@@ -605,4 +608,103 @@ small {
 }
 .colomns-wrap {
   flex-wrap: wrap;
+}
+
+// calander
+
+.react-datepicker {
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb !important;
+  font-weight: 400;
+  font-size: 16px !important;
+  font-family: 'Instrument Sans' !important;
+  .react-datepicker__month-container {
+    width: 100%;
+    border-right: 1px solid #dbdbdb;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  .react-datepicker__day-names {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+  .react-datepicker__week {
+    display: flex;
+    justify-content: space-between;
+  }
+  .react-datepicker__month {
+    text-align: center;
+    padding: 0 12px;
+    margin: 0;
+  }
+  .react-datepicker__header {
+    width: 100%;
+    background: transparent;
+    border-bottom: 0;
+  }
+  .react-datepicker__current-month {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    font-size: 16px !important;
+  }
+  .react-datepicker__day--today {
+    color: #fff !important;
+    font-weight: 400 !important;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    &:after {
+      width: 44px;
+      height: 44px;
+      content: '';
+      background: black;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      z-index: -1;
+    }
+    &::before {
+      content: "";
+    display: block;
+    width: 14px;
+    height: 3px;
+    background: red;
+    border-radius: 22px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    }
+  }
+  .react-datepicker__day {
+    margin: 0.4rem 0.166rem;
+  }
+  .react-datepicker__day--outside-month {
+    color: #c6c6c6;
+  }
+  .react-datepicker__day--selected {
+    background-color: transparent;
+    color: inherit;
+    position: relative;
+    &::before {
+      content: "";
+    display: block;
+    width: 14px;
+    height: 3px;
+    background: red;
+    border-radius: 22px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    }
+  }
 }

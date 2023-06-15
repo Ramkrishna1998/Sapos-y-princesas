@@ -187,7 +187,6 @@
 }
 
 .legal_links_desktop {
-  display: block; 
   @media (max-width: 768px) {
     display: none;
   }
@@ -203,7 +202,6 @@
 }
 
 .info_icon_list_desktop {
-  display: block; 
   @media (max-width: 768px) {
     display: none;
   }
