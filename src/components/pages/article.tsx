@@ -1,19 +1,18 @@
 // import { Article } from '@components/organisms/artical';
+import { Article } from '@components/organisms/artical';
 import { Footer } from '@components/organisms/footer';
 import { Header } from '@components/organisms/header';
-import { HomeInner } from '@components/organisms/homeinner';
 
-const Home = () => {
+const ArticlePage = () => {
   return (
    <>
     <div className='page-body'>
     <Header />
-    {/* <Article /> */}
-    <HomeInner />
+    <Article />
     <Footer />
     </div>
    </>
   );
 };
 
-export default Home;
+export default ArticlePage;

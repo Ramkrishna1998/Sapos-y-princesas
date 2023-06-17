@@ -1,0 +1,165 @@
+// @import url('../../../resources/css/custom.module.scss');
+.main_header {
+  max-width: 700px;
+}
+
+.tag_list {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.form_element {
+  display: flex;
+  gap: 0.5rem;
+  @media (max-width: 768px) {
+    display: block;
+    button {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+.col2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px 8px;
+  flex-wrap: wrap;
+  .card_aside {
+    width: 49%;
+  }
+  @media (max-width: 768px) {
+    display: block;
+    .card_aside {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.tag_Dark {
+  justify-content: center;
+  div {
+    background-color: black;
+    border-color: #000;
+    p {
+      color: #fff;
+    }
+  }
+}
+
+.row_planes {
+  gap: 22px;
+  @media (max-width: 768px) {
+    display: block;
+    .col_plans {
+      margin-bottom: 0.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.card_bloque {
+  padding: 12px;
+}
+
+.row_bloque {
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  .col_bloque {
+    max-width: 180px;
+    span {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 180%;
+      letter-spacing: 0.16em;
+    }
+    h4 {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: -0.01em;
+    }
+    @media (max-width: 480px) {
+      max-width: fit-content;
+      width: 100%;
+    }
+  }
+}
+
+.basic_banner_Card {
+  .basic_banner_details {
+    margin-top: 2rem;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    .basic_banner_img {
+      order: 2;
+    }
+    .basic_banner_details {
+      order: 1;
+      margin-top: 0;
+    }
+  }
+}
+
+.swiper_container {
+  max-width: 958px;
+  margin:0 auto;
+}
+
+.subscribe_container {
+  max-width: 502px;
+  margin: 0 auto;
+  h3 {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.grid_wrapped_cards {
+  display: flex;
+    flex-wrap: wrap;
+    gap: 22px 8px;
+    justify-content: center;
+}
+
+.col_bloque_grid {
+  max-width: 250px;
+}
+
+.mic_bg {
+  background-color: rgba(252, 252, 252, 0.8);
+}
+
+.row_parts {
+  display: flex;
+  gap:0.5rem;
+  .col3 {
+      width: 100%;
+      max-width: 300px;
+  }
+  .col9 {
+    width: 100%;
+    max-width: 770px;
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.find_plan {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

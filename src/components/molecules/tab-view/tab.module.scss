@@ -1,0 +1,57 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.tabs {
+  list-style: none;
+  padding: 0;
+}
+.tabs li {
+  display: inline-block;
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.tabs li a {
+  color: #969696  ;
+    float: left;
+    display: block;
+    padding: 8px 4px;
+    position: relative;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+.tabs li a:hover {
+  color: #161616;
+}
+.group:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+.box_wrap {
+  position: relative;
+  // min-height: 250px;
+}
+// .tabbed_area div div {
+//   background: white;
+//   padding: 20px;
+//   min-height: 250px;
+//   position: absolute;
+//   top: -15px;
+//   left: 0;
+//   width: 100%;
+// }
+
+#box_one:target,
+#box_two:target,
+#box_three:target {
+  z-index: 1;
+}
+
+.active {
+  color: #161616  !important;
+  border-bottom: 2px solid #000 !important;
+}

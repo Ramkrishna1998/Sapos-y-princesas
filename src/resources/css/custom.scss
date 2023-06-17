@@ -316,14 +316,17 @@ summary {
   --font-family: 'Nunito', sans-serif;
 }
 
-
-
 // Layout design is here
+.container_fluid {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 12px;
+}
 .container_limit {
   width: 100%;
   margin: 0 auto;
   padding: 0 82px;
-  @media(max-width:1024px) {
+  @media (max-width: 1024px) {
     padding: 0 12px;
   }
 }
@@ -337,9 +340,21 @@ summary {
 .container_article {
   max-width: 724px;
   margin: 0 auto;
-  @media(max-width:768px) {
+  @media (max-width: 768px) {
     margin: inherit;
   }
+}
+.container_categories {
+  max-width: 1328px;
+  margin: 0 auto;
+
+}
+
+.banner_container {
+  width: 100%;
+  max-width: 1104px;
+  padding: 0 12px;
+  margin: 0 auto;
 }
 
 .d_flex_aligned {
@@ -390,7 +405,12 @@ a {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   margin: 0;
 }
 
@@ -401,10 +421,10 @@ h2 {
   line-height: 130%;
 }
 
-.h3 {
+h3 {
   font-weight: 700;
-font-size: 22px;
-line-height: 130%;
+  font-size: 22px;
+  line-height: 130%;
 }
 
 .h3-v2 {
@@ -415,8 +435,8 @@ line-height: 130%;
 
 h4 {
   font-weight: 700;
-font-size: 20px;
-line-height: 130%;
+  font-size: 20px;
+  line-height: 130%;
 }
 
 p {
@@ -424,6 +444,12 @@ p {
   font-size: 16px;
   line-height: 180%;
   letter-spacing: 0.02em;
+}
+
+.pv1 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
 }
 
 small {
@@ -436,6 +462,11 @@ small {
   display: block;
 }
 
+.mobile_h2 {
+  font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+}
 // Global Classes
 
 .text_center {
@@ -462,10 +493,10 @@ small {
   margin-bottom: 2rem;
 }
 .mt_22 {
-  margin-top: 22px ;
+  margin-top: 22px;
 }
 .mb_22 {
-  margin-bottom: 22px ;
+  margin-bottom: 22px;
 }
 .pt_1 {
   padding-top: 1rem;
@@ -481,6 +512,10 @@ small {
 
 .pb_2 {
   padding-bottom: 2rem;
+}
+
+.mb_default {
+  margin-bottom: 8px;
 }
 
 .mono_header {
@@ -512,6 +547,16 @@ small {
   }
 }
 
+.header_with_icon {
+  display: flex;
+  align-items: center;
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+
 .btn_with_Title {
   display: flex;
   justify-content: center;
@@ -529,12 +574,13 @@ small {
 .plans_slider {
   position: relative;
 
-  .swiper-button-next, .swiper-button-prev {
-    background: #F2F2F2;
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: #f2f2f2;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid #DBDBDB;
+    border: 1px solid #dbdbdb;
   }
 
   .swiper-button-prev {
@@ -567,17 +613,73 @@ small {
     margin-bottom: 22px;
     span {
       width: 6px;
-    height: 6px;
-    background: #DBDBDB;
-    opacity: 1;
+      height: 6px;
+      background: #dbdbdb;
+      opacity: 1;
+      vertical-align: middle;
     }
     .swiper-pagination-bullet-active {
       width: 10px;
       height: 10px;
       background: #161616;
     }
-    
+  }
 }
+
+.pagination_desktop {
+  .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-next {
+   display: none;
+  }
+  @media (max-width:768px) {
+    .swiper-button-prev {
+      display: flex;
+    }
+    .swiper-button-next {
+     display: flex;
+    }
+  }
+}
+
+.banner_slider {
+  .swiper-button-prev {
+    left: 14px;
+    top: 38%;
+    background: rgba(242, 242, 242, 0.24);
+    border: transparent;
+    &:after {
+      content: '';
+      background: url('../images/svg/swiper-left.svg') no-repeat center;
+      width: 13px;
+      height: 14px;
+      background-size: contain;
+      opacity: 1;
+      filter: invert(1);
+    }
+    @media (max-width:480px) {
+      top: 24%;
+    }
+
+  }
+  .swiper-button-next {
+    right: 14px;
+    top: 38%;
+    background: rgba(242, 242, 242, 0.24);
+    border: transparent;
+    &:after {
+      content: '';
+      background: url('../images/svg/swiper-right.svg') no-repeat center;
+      width: 13px;
+      height: 14px;
+      background-size: contain;
+      filter: invert(1);
+    }
+    @media (max-width:480px) {
+      top: 24%;
+    }
+  }
 }
 
 // form
@@ -589,14 +691,14 @@ small {
 
 .form_control {
   display: inline-block;
-    width: 100%;
-    border: 1px solid #DBDBDB;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 180%;
-    color: #969696;
-    padding: 6px 12px;
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+  color: #969696;
+  padding: 6px 12px;
 }
 
 .colomns {
@@ -605,4 +707,103 @@ small {
 }
 .colomns-wrap {
   flex-wrap: wrap;
+}
+
+// calander
+
+.react-datepicker {
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb !important;
+  font-weight: 400;
+  font-size: 16px !important;
+  font-family: 'Instrument Sans' !important;
+  .react-datepicker__month-container {
+    width: 100%;
+    border-right: 1px solid #dbdbdb;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  .react-datepicker__day-names {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+  .react-datepicker__week {
+    display: flex;
+    justify-content: space-between;
+  }
+  .react-datepicker__month {
+    text-align: center;
+    padding: 0 12px;
+    margin: 0;
+  }
+  .react-datepicker__header {
+    width: 100%;
+    background: transparent;
+    border-bottom: 0;
+  }
+  .react-datepicker__current-month {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    font-size: 16px !important;
+  }
+  .react-datepicker__day--today {
+    color: #fff !important;
+    font-weight: 400 !important;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    &:after {
+      width: 44px;
+      height: 44px;
+      content: '';
+      background: black;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      z-index: -1;
+    }
+    &::before {
+      content: "";
+    display: block;
+    width: 14px;
+    height: 3px;
+    background: red;
+    border-radius: 22px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    }
+  }
+  .react-datepicker__day {
+    margin: 0.4rem 0.166rem;
+  }
+  .react-datepicker__day--outside-month {
+    color: #c6c6c6;
+  }
+  .react-datepicker__day--selected {
+    background-color: transparent;
+    color: inherit;
+    position: relative;
+    &::before {
+      content: "";
+    display: block;
+    width: 14px;
+    height: 3px;
+    background: red;
+    border-radius: 22px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    }
+  }
 }
