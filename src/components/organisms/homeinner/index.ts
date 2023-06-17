@@ -1,0 +1,1 @@
+export { HomeInner } from './homeinner';

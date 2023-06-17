@@ -317,6 +317,11 @@ summary {
 }
 
 // Layout design is here
+.container_fluid {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 12px;
+}
 .container_limit {
   width: 100%;
   margin: 0 auto;
@@ -338,6 +343,18 @@ summary {
   @media (max-width: 768px) {
     margin: inherit;
   }
+}
+.container_categories {
+  max-width: 1328px;
+  margin: 0 auto;
+
+}
+
+.banner_container {
+  width: 100%;
+  max-width: 1104px;
+  padding: 0 12px;
+  margin: 0 auto;
 }
 
 .d_flex_aligned {
@@ -404,7 +421,7 @@ h2 {
   line-height: 130%;
 }
 
-.h3 {
+h3 {
   font-weight: 700;
   font-size: 22px;
   line-height: 130%;
@@ -429,6 +446,12 @@ p {
   letter-spacing: 0.02em;
 }
 
+.pv1 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+}
+
 small {
   font-style: normal;
   font-weight: 400;
@@ -439,6 +462,11 @@ small {
   display: block;
 }
 
+.mobile_h2 {
+  font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+}
 // Global Classes
 
 .text_center {
@@ -486,6 +514,10 @@ small {
   padding-bottom: 2rem;
 }
 
+.mb_default {
+  margin-bottom: 8px;
+}
+
 .mono_header {
   text-transform: uppercase;
   font-weight: 700;
@@ -512,6 +544,16 @@ small {
 .mobile_text_left {
   @media (max-width: 768px) {
     text-align: left;
+  }
+}
+
+.header_with_icon {
+  display: flex;
+  align-items: center;
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
   }
 }
 
@@ -574,11 +616,68 @@ small {
       height: 6px;
       background: #dbdbdb;
       opacity: 1;
+      vertical-align: middle;
     }
     .swiper-pagination-bullet-active {
       width: 10px;
       height: 10px;
       background: #161616;
+    }
+  }
+}
+
+.pagination_desktop {
+  .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-next {
+   display: none;
+  }
+  @media (max-width:768px) {
+    .swiper-button-prev {
+      display: flex;
+    }
+    .swiper-button-next {
+     display: flex;
+    }
+  }
+}
+
+.banner_slider {
+  .swiper-button-prev {
+    left: 14px;
+    top: 38%;
+    background: rgba(242, 242, 242, 0.24);
+    border: transparent;
+    &:after {
+      content: '';
+      background: url('../images/svg/swiper-left.svg') no-repeat center;
+      width: 13px;
+      height: 14px;
+      background-size: contain;
+      opacity: 1;
+      filter: invert(1);
+    }
+    @media (max-width:480px) {
+      top: 24%;
+    }
+
+  }
+  .swiper-button-next {
+    right: 14px;
+    top: 38%;
+    background: rgba(242, 242, 242, 0.24);
+    border: transparent;
+    &:after {
+      content: '';
+      background: url('../images/svg/swiper-right.svg') no-repeat center;
+      width: 13px;
+      height: 14px;
+      background-size: contain;
+      filter: invert(1);
+    }
+    @media (max-width:480px) {
+      top: 24%;
     }
   }
 }

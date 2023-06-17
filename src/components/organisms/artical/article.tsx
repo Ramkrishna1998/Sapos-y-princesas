@@ -28,7 +28,7 @@ import RightArrow2Black from '@resources/images/svg/rightarrow2-black.svg';
 import RightArrow2 from '@resources/images/svg/rightarrow2.svg';
 import StarOutlined from '@resources/images/svg/star-outline.svg';
 import { getExtraClasses } from '@utils/common';
-import { Footer } from '../footer';
+// import { Footer } from '../footer';
 import styles from './article.module.scss';
 // import ArticleData from './data';
 import Img1 from './images/artical1_img.png';
@@ -424,7 +424,7 @@ export const Article: React.FC<IarticlesProps> = (props) => {
         </Swiper>
       </div>
       <Advertisement />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

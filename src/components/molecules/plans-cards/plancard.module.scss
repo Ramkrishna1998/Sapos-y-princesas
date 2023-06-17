@@ -4,6 +4,7 @@
   display: block;
   border: 1px solid #dbdbdb;
   border-radius: 8px;
+  overflow: hidden;
   .cardclassname {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -12,13 +13,12 @@
 
 .plan_description {
   padding: 22px;
-  span {
+  .desc_label {
     font-weight: 700;
     font-size: 12px;
     display: block;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
     color: #565656;
     line-height: 180%;
   }
@@ -58,9 +58,6 @@
   .imgcard {
     order: 2;
     width: 50%;
-    div {
-      height: 100%;
-    }
   }
   .card_img_Fix {
     border-radius: 0;
@@ -68,5 +65,40 @@
     border-bottom-right-radius: 8px;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.desc_sub_rates {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  img {
+    filter: invert(34%) sepia(19%) saturate(5%) hue-rotate(354deg) brightness(94%) contrast(95%);
+  }
+}
+
+.ranks {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  img {
+    width: 16px;
+    height: auto;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+}
+
+.desc_center {
+  align-items: center;
+  height: 100%;
+  .imgcard {
+    height: 100%;
   }
 }

@@ -1,0 +1,50 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.banner_content {
+  width: 100%;
+  max-width: 700px;
+  @media (max-width:980px) {
+    max-width: 500px;
+  }
+  @media (max-width:768px) {
+    max-width: fit-content;
+  }
+}
+
+.home_banner {
+  display: flex;
+}
+
+.banner_main_wrapper {
+  width: 100%;
+  max-width: 1077px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.banner_container {
+  display: flex;
+  justify-content: space-between;
+  gap:8px
+}
+
+.add_banner {
+  max-width: 300px;
+  width: 100%;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+  @media (max-width:768px) {
+   display: none;
+  }
+}
+
+.advertisement_sides {
+  // padding: 0 2rem;
+  max-width: 120px;
+}
+
+.banner_img {
+  border-radius: 0.5px;
+}

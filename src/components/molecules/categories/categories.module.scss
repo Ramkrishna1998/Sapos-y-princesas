@@ -1,0 +1,39 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.categories_box {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  @media (max-width:768px) {
+    justify-content: center;
+    gap:0.5rem;
+  }
+}
+
+.Category {
+  padding: 14.5px 1px;
+  width: 100%;
+  max-width: 116px;
+  background: #fcfcfc;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  transition: transform 0.5s ease;
+  img {
+    filter: invert(67%) sepia(0%) saturate(1%) hue-rotate(158deg) brightness(90%) contrast(86%);
+  }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+  }
+  &:hover {
+    transform: scale(1.1);
+    p {
+      color: #ef5142;
+    }
+  }
+}
