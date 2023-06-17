@@ -265,10 +265,9 @@ export const Article: React.FC<IarticlesProps> = (props) => {
         <div> 
         <DatePicker
           inline
-          className='datepicker_theme'
           monthsShown={3}
           selected={startDate}
-          onChange={(date) => setStartDate(date)}
+          onChange={(date) => setStartDate(date as Date)}
         />
         </div>
       </div>
