@@ -43,7 +43,7 @@ export const HomeInner: React.FC<IarticlesProps> = (props) => {
         <div className='banner_container mt_2 mb_2'>
           <h2 className='mb_2'>Te recomendamos</h2>
         </div>
-        <Banner bannertitlebottom="'Intimidad': las enseñanzas de una miniserie con problemáticas reales de la era digital" />
+        <Banner bannertitlebottom="'Intimidad': las enseñanzas de una miniserie con problemáticas reales de la era digital" showbannertitlebottom={true} />
       </section>
       <section className='gray_container'>
         <div className='banner_container text_center'>

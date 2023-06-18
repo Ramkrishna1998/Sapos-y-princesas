@@ -3,6 +3,7 @@ import FacebookIcon from '@resources/images/svg/facebook.svg';
 import IsntaIcon from '@resources/images/svg/instagram.svg';
 import LikeIcon from '@resources/images/svg/like.svg';
 import LinkedinIcon from '@resources/images/svg/linkedin.svg';
+import MailIcon from '@resources/images/svg/mail.svg';
 import RssIcon from '@resources/images/svg/rss.svg';
 import ShareIcon from '@resources/images/svg/share.svg';
 import TwitterIcon from '@resources/images/svg/twitter.svg';
@@ -16,7 +17,9 @@ interface IinfoDetailsProps {
   showInstaicon?: boolean;
   showLinkedinicon?: boolean;
   showfacebookicon?: boolean;
+  showfacebookiconarticle?: boolean;
   showlikeicon?: boolean;
+  showmailicon?: boolean;
   showrssicon?: boolean;
   showshareicon?: boolean;
   showtwittericon?: boolean;
@@ -25,7 +28,7 @@ interface IinfoDetailsProps {
 }
 export const IconList: React.FC<IinfoDetailsProps> = (props) => {
   // eslint-disable-next-line react/prop-types, @typescript-eslint/no-unsafe-assignment
-  const { className, showwhatsappicon = false, showshareicon = false, showLinkedinicon = false,  showlikeicon = false, showyoutubeicon = false, showrssicon = false,  showfacebookicon = false, showtwittericon = false, showInstaicon = false } = props;
+  const { className, showwhatsappicon = false, showmailicon = false, showfacebookiconarticle = false, showshareicon = false, showLinkedinicon = false,  showlikeicon = false, showyoutubeicon = false, showrssicon = false,  showfacebookicon = false, showtwittericon = false, showInstaicon = false } = props;
   const extraClasses = getExtraClasses(styles, className);
 
   return (
@@ -44,6 +47,11 @@ export const IconList: React.FC<IinfoDetailsProps> = (props) => {
          {showshareicon && (
           <div className={styles.Icon_box}>
             <img alt='' src={ShareIcon} />
+          </div>
+        )}
+          {showfacebookiconarticle && (
+          <div className={styles.Icon_box}>
+            <img alt='' src={FacebookIcon} />
           </div>
         )}
           {showyoutubeicon && (
@@ -74,6 +82,11 @@ export const IconList: React.FC<IinfoDetailsProps> = (props) => {
             {showlikeicon && (
           <div className={styles.Icon_box}>
             <img alt='' src={LikeIcon} />
+          </div>
+        )}
+          {showmailicon && (
+          <div className={styles.Icon_box}>
+            <img alt='' src={MailIcon} />
           </div>
         )}
      

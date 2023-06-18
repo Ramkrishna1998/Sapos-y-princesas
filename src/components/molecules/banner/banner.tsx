@@ -24,6 +24,7 @@ interface IinfoDetailsProps {
   className?: string;
   showbannerdesc?: boolean;
   showbannertitle?: boolean;
+  showbannertitlebottom?: boolean;
   showsubtitle?: boolean;
   subtitle?: string;
 }
@@ -38,11 +39,12 @@ export const Banner: React.FC<IinfoDetailsProps> = (props) => {
     showsubtitle = false,
     showbannertitle = false,
     showbannerdesc = false,
+    showbannertitlebottom = false
   } = props;
   const extraClasses = getExtraClasses(styles, className);
 
   return (
-    <div className={cn(styles.home_banner, extraClasses)}>
+    <div className={cn(styles.home_banner,'container_fluid' , extraClasses)}>
       <div className={styles.advertisement_sides}></div>
       <div className={styles.banner_main_wrapper}>
         <div className={styles.banner_container}>
@@ -50,7 +52,7 @@ export const Banner: React.FC<IinfoDetailsProps> = (props) => {
             {showsubtitle && (
               <h4
                 className={cn(
-                  'text_gray mono_header mb_22 text_center mobile_text_left',
+                  'text_gray mono_header text_center mobile_text_left',
                   styles.mono_header_content
                 )}
               >
@@ -78,7 +80,9 @@ export const Banner: React.FC<IinfoDetailsProps> = (props) => {
                   showspecialtag={false}
                   src={bannerImg} 
                 />
-                <h2 className='mt_22'>{bannertitlebottom}</h2>
+                     {showbannertitlebottom &&
+                  <h2 className='mt_22'>{bannertitlebottom}</h2>
+                }
               </SwiperSlide>
               <SwiperSlide>
                 <ImgCard
@@ -98,7 +102,9 @@ export const Banner: React.FC<IinfoDetailsProps> = (props) => {
                   showspecialtag={false}
                   src={bannerImg}
                 />
-                <h2 className='mt_22'>{bannertitlebottom}</h2>
+                {showbannertitlebottom &&
+                  <h2 className='mt_22'>{bannertitlebottom}</h2>
+                }
               </SwiperSlide>
             </Swiper>
           </div>

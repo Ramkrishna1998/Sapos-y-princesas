@@ -1,0 +1,1 @@
+export { DigitalMagazine } from './digitalmagazine';

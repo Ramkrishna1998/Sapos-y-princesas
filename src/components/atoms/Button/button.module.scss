@@ -49,3 +49,17 @@
     margin-left: 14px;
   }
 }
+
+.btn_invert {
+  background: transparent;
+  border: 1px solid #DBDBDB;
+  color: #161616;
+  &:hover {
+    background: #161616;;
+    border-color: #161616;
+    color: #ffffff;
+    img {
+      filter: invert(1);
+    }
+  }
+}
