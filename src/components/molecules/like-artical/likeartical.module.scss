@@ -1,0 +1,18 @@
+.articalLike {
+  border-radius: 8px;
+}
+
+.thums {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 4px;
+  justify-content: center;
+}
+
+.thums_btn {
+  border-radius: 30px;
+  img {
+    width: 20px;
+  }
+}

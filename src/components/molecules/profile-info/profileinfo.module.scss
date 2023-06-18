@@ -1,0 +1,50 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.profile_info_row {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 11px;
+
+}
+
+.Profile_user_info {
+  h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+  }
+  span {
+    display: block;
+    color: #565656;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 180%;
+  }
+}
+
+.user_pic {
+  width: 44px;
+  height: 44px;
+  img {
+    border-radius: 50px;
+    object-fit: cover;
+  }
+}
+.icon_list {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #DBDBDB;
+}
+.Icon_set {
+  display: flex;
+  button {
+    padding: 12px;
+  }
+  img {
+    max-width: 20px;
+  }
+}
+
+.rating {
+  margin-left: auto;
+}

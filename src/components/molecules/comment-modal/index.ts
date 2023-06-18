@@ -1,0 +1,1 @@
+export { Commentsmodal } from './comments';

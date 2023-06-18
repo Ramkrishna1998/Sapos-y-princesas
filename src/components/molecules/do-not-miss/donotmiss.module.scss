@@ -1,0 +1,12 @@
+.row_planes {
+  gap: 8px;
+  @media (max-width: 768px) {
+    display: block;
+    .col_plans {
+        margin-bottom: 0.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+  }
+}

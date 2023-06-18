@@ -12,11 +12,12 @@
 
 .modal {
   background-color: #fff;
-  padding: 20px;
+  padding: 2rem;
   border-radius: 4px;
   max-width: 90%;
   max-height: 90%;
   overflow: auto;
+  position: relative;
 }
 
 .openButton {
@@ -40,4 +41,23 @@
 
 .zIndexClass{
   z-index: 1000000;
+}
+
+
+.closeButton {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border:none;
+  right: 15px;
+  top: 15px;
+
+  &:hover {
+    background-color: transparent;
+    border:none;
+  }
+  img {
+    width: 14px;
+  }
 }

@@ -1,0 +1,1 @@
+export { LikeArtical } from './likeartical';
