@@ -1,0 +1,12 @@
+// @import url('../../../resources/css/custom.module.scss');
+
+.rating_container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 7px;
+ img {
+  max-width: 16px;
+  height: auto;
+ }
+}

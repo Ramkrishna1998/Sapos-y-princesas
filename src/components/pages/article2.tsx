@@ -1,9 +1,11 @@
 import cn from 'classnames';
 import { Button } from '@components/atoms/Button';
 import buttonstyle from '@components/atoms/Button/button.module.scss';
+import { ModalComponent } from '@components/atoms/Modal';
 import { Advertisement } from '@components/molecules/advertisement';
 import { ArticleContent } from '@components/molecules/artical-content';
 import { Banner } from '@components/molecules/banner';
+import { Commentsmodal } from '@components/molecules/comment-modal';
 import { DigitalMagazine } from '@components/molecules/digital-magazin';
 import { DonotMiss } from '@components/molecules/do-not-miss';
 import { IconList } from '@components/molecules/icon-list';
@@ -63,6 +65,9 @@ const Article2 = () => {
         <DonotMiss />
         <DigitalMagazine />
         <Footer />
+        <ModalComponent className='p0' isbuttonvisible={false} isOpen={true} >
+            <Commentsmodal  />
+        </ModalComponent>
       </div>
     </>
   );

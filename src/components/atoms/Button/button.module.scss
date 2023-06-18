@@ -63,3 +63,12 @@
     }
   }
 }
+
+.btn_icon_inverse_dark {
+  .btn_Icon {
+    filter: invert(1);
+  }
+  &:hover {
+    filter: none;
+  }
+}

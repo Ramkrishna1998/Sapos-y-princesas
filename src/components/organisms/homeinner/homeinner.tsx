@@ -5,6 +5,7 @@ import { Navigation, Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button } from '@components/atoms/Button';
 import ButtonStyles from '@components/atoms/Button/button.module.scss';
+import { ModalComponent } from '@components/atoms/Modal';
 import { Tag } from '@components/atoms/tags';
 import { Advertisement } from '@components/molecules/advertisement';
 import { Banner } from '@components/molecules/banner';
@@ -530,6 +531,7 @@ export const HomeInner: React.FC<IarticlesProps> = (props) => {
       <h3 className='mb_22'>Descubre. Sorpréndete</h3>
               <Categories />
       </div>
+      <ModalComponent isOpen={true} />
       </section>
     </div>
   );

@@ -1,0 +1,50 @@
+.comment_title {
+  display: flex;
+  span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 180%;
+    display: flex;
+    padding: 10px 20px;
+    width: 100%;
+    background: #F2F2F2;
+    img {
+      margin-right: 8px;
+    }
+  }
+}
+
+.comment_box {
+  width: 100%;
+  max-width: 600px;
+}
+
+.comment_info {
+  padding: 0 12px 12px 12px;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.btn_block {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  button {
+    padding: 10px 12px;
+  }
+}
+
+.button_fullwidth {
+  width: 100%;
+}
+
+.btn_thums {
+  display: flex;
+  gap: 4px;
+}
+
+.comment_content {
+  margin: 1rem 0;
+}

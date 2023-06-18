@@ -2,6 +2,7 @@
 import cn from 'classnames';
 import { Button } from '@components/atoms/Button';
 import ButtonStyle from '@components/atoms/Button/button.module.scss';
+import { Rating } from '@components/atoms/rating';
 import HeadphoneIcon from '@resources/images/svg/headphone.svg';
 import mailIcon from '@resources/images/svg/mail.svg';
 import SaveIcon from '@resources/images/svg/save.svg';
@@ -17,11 +18,20 @@ interface IimgCardProps {
   profiledesc?: string;
   showprofiledesc?: boolean;
   showprofilquote?: boolean;
+  showrating?: boolean;
   showusericon?: boolean;
 }
 export const ProfileInfo: React.FC<IimgCardProps> = (props) => {
   // eslint-disable-next-line react/prop-types, @typescript-eslint/no-unsafe-assignment
-  const { className, showusericon = true, profiledesc, showprofiledesc = false, showprofilquote = true, profileTitleclassName } = props;
+  const {
+    className,
+    showusericon = true,
+    profiledesc,
+    showprofiledesc = false,
+    showprofilquote = true,
+    profileTitleclassName,
+    showrating = false,
+  } = props;
   const extraClasses = getExtraClasses(styles, className);
   const profiletitleclasses = getExtraClasses(styles, profileTitleclassName);
 
@@ -33,39 +43,35 @@ export const ProfileInfo: React.FC<IimgCardProps> = (props) => {
         </div>
         <div className={styles.Profile_user_info}>
           <h4 className={profiletitleclasses}>Sapos y Princesas</h4>
-          {showprofilquote &&
-            <span>Fecha de actualización: 16.02.23</span>
-          }
-          {showprofiledesc &&
-            <span className='text_dark'>{profiledesc}</span>
-          }
+          {showprofilquote && <span>Fecha de actualización: 16.02.23</span>}
+          {showprofiledesc && <span className='text_dark'>{profiledesc}</span>}
         </div>
+        {showrating && <Rating className={styles.rating} />}
       </div>
 
-    {showusericon &&
+      {showusericon && (
         <div className={styles.icon_list}>
-        <div className={styles.Icon_set}>
-              <Button className={ButtonStyle.reset_btn}>
-                    <img alt='' src={WhatsappIcon} />
-              </Button>
-              <Button className={ButtonStyle.reset_btn}>
-                    <img alt='' src={ShareIcon} />
-              </Button>
-              <Button className={ButtonStyle.reset_btn}>
-                    <img alt='' src={mailIcon} />
-              </Button>
+          <div className={styles.Icon_set}>
+            <Button className={ButtonStyle.reset_btn}>
+              <img alt='' src={WhatsappIcon} />
+            </Button>
+            <Button className={ButtonStyle.reset_btn}>
+              <img alt='' src={ShareIcon} />
+            </Button>
+            <Button className={ButtonStyle.reset_btn}>
+              <img alt='' src={mailIcon} />
+            </Button>
+          </div>
+          <div className={styles.Icon_set}>
+            <Button className={ButtonStyle.reset_btn}>
+              <img alt='' src={SaveIcon} />
+            </Button>
+            <Button className={ButtonStyle.reset_btn}>
+              <img alt='' src={HeadphoneIcon} />
+            </Button>
+          </div>
         </div>
-        <div className={styles.Icon_set}>
-        <Button className={ButtonStyle.reset_btn}>
-                    <img alt='' src={SaveIcon} />
-              </Button>
-              <Button className={ButtonStyle.reset_btn}>
-                    <img alt='' src={HeadphoneIcon} />
-              </Button>
-        </div>
-    </div>
-    }
-     
+      )}
     </div>
   );
 };
