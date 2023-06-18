@@ -23,15 +23,7 @@ interface IimgCardProps {
 }
 export const ProfileInfo: React.FC<IimgCardProps> = (props) => {
   // eslint-disable-next-line react/prop-types, @typescript-eslint/no-unsafe-assignment
-  const {
-    className,
-    showusericon = true,
-    profiledesc,
-    showprofiledesc = false,
-    showprofilquote = true,
-    profileTitleclassName,
-    showrating = false,
-  } = props;
+  const { className, showusericon = true, profiledesc, showprofiledesc = false, showprofilquote = true, profileTitleclassName, showrating=false } = props;
   const extraClasses = getExtraClasses(styles, className);
   const profiletitleclasses = getExtraClasses(styles, profileTitleclassName);
 
@@ -43,35 +35,42 @@ export const ProfileInfo: React.FC<IimgCardProps> = (props) => {
         </div>
         <div className={styles.Profile_user_info}>
           <h4 className={profiletitleclasses}>Sapos y Princesas</h4>
-          {showprofilquote && <span>Fecha de actualización: 16.02.23</span>}
-          {showprofiledesc && <span className='text_dark'>{profiledesc}</span>}
+          {showprofilquote &&
+            <span>Fecha de actualización: 16.02.23</span>
+          }
+          {showprofiledesc &&
+            <span className='text_dark'>{profiledesc}</span>
+          }
         </div>
-        {showrating && <Rating className={styles.rating} />}
+        {showrating &&
+              <Rating className={styles.rating} />
+          }
       </div>
 
-      {showusericon && (
+    {showusericon &&
         <div className={styles.icon_list}>
-          <div className={styles.Icon_set}>
-            <Button className={ButtonStyle.reset_btn}>
-              <img alt='' src={WhatsappIcon} />
-            </Button>
-            <Button className={ButtonStyle.reset_btn}>
-              <img alt='' src={ShareIcon} />
-            </Button>
-            <Button className={ButtonStyle.reset_btn}>
-              <img alt='' src={mailIcon} />
-            </Button>
-          </div>
-          <div className={styles.Icon_set}>
-            <Button className={ButtonStyle.reset_btn}>
-              <img alt='' src={SaveIcon} />
-            </Button>
-            <Button className={ButtonStyle.reset_btn}>
-              <img alt='' src={HeadphoneIcon} />
-            </Button>
-          </div>
+        <div className={styles.Icon_set}>
+              <Button className={ButtonStyle.reset_btn}>
+                    <img alt='' src={WhatsappIcon} />
+              </Button>
+              <Button className={ButtonStyle.reset_btn}>
+                    <img alt='' src={ShareIcon} />
+              </Button>
+              <Button className={ButtonStyle.reset_btn}>
+                    <img alt='' src={mailIcon} />
+              </Button>
         </div>
-      )}
+        <div className={styles.Icon_set}>
+        <Button className={ButtonStyle.reset_btn}>
+                    <img alt='' src={SaveIcon} />
+              </Button>
+              <Button className={ButtonStyle.reset_btn}>
+                    <img alt='' src={HeadphoneIcon} />
+              </Button>
+        </div>
+    </div>
+    }
+     
     </div>
   );
 };
